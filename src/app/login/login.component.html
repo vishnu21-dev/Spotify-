@@ -1,0 +1,28 @@
+<form #loginForm="ngForm" (ngSubmit)="loggedIn()">
+  <div id="div">
+    <h2>Login</h2>
+  <input id="input" name="username" placeholder="Enter email" type="text" #emailId=ngModel [(ngModel)]="user.emailId" required email>
+  <div *ngIf="emailId.invalid && (emailId.touched || emailId.dirty) ">
+    <div *ngIf="emailId?.errors?.['email']">
+      <p>Not valid</p>
+    </div>
+    <div *ngIf="emailId?.errors?.['required']">
+      <p>emailId is required</p>
+    </div>
+  </div>
+  <input id="input" name="password" placeholder="Enter password" #password="ngModel" type="text" [(ngModel)]="user.password" required minlength="5"><br>
+  <div *ngIf="password.invalid && (password.touched || password.dirty) ">
+    <div *ngIf="password?.errors?.['minlength']">
+      <p>Password length minimum of 5 character</p>
+    </div>
+    <div *ngIf="password?.errors?.['required']">
+      <p>password is required</p>
+    </div>
+  </div>
+  <button type="submit" id="button" [disabled]=""[disabled]="loginForm.invalid"> Login </button>
+</div>
+
+<ng-container *ngIf="requestedSongError">
+  <h3>{{requestedsong}}</h3>
+</ng-container>
+  </form>

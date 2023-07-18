@@ -1,0 +1,27 @@
+.example-card {
+  max-width: 300px;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+flex-direction: row;
+flex-wrap: wrap;
+}
+#cards{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12vw;
+
+}
+
+#div{
+  margin:1%;
+
+  display: flex;
+   flex-wrap:wrap;
+  border: 2px solid;
+
+}
+mat-card{
+  display:flex;
+
+}

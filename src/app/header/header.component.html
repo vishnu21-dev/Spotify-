@@ -1,0 +1,48 @@
+<div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Welcome</mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="allTracks"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a>
+
+
+      <a mat-list-item (click)="check()">Create Playlist <mat-icon>library_books</mat-icon></a>
+
+
+      <a mat-list-item  (click)="checkforViewPlaylist()">View Your Playlists</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div id="span">
+      <span>BEATS</span><i class="bi bi-headphones"></i>
+      <div id="lrdiv">
+        <ng-container *ngIf="isLoginInvalid()" >
+      <button  (click)="checklogin()">Login</button>
+      <button id="register"(click)="checkregister()">Sign up for free</button>
+    </ng-container>
+    <ng-container *ngIf="islogOutInvalid()" >
+      <button (click)="logout()">Log out</button>
+    </ng-container>
+      </div>
+      </div>
+    </mat-toolbar>
+<div id="router">
+    <router-outlet></router-outlet>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>

@@ -1,0 +1,26 @@
+
+
+  <mat-card class="example-card">
+
+    <div *ngFor="let playlist of playlists">
+
+    <mat-card-header>
+
+      <mat-card-title>{{playlist.name}}</mat-card-title> <mat-card-actions>
+
+      <button mat-button *ngIf="id==0"  routerLink="../Playlistsong/{{playlist.name}}">view Tracks</button>
+      <button mat-button  (click)="add(playlist.name)">add track to playlist</button>
+
+      <button mat-button *ngIf="id==0"  (click)="deletePlaylist(playlist.name)">	<mat-icon>delete</mat-icon></button>
+
+
+    </mat-card-actions>
+
+</mat-card-header>
+</div>
+<ng-container *ngIf="requestedSongError">
+  <h3>{{requestedsong}}</h3>
+</ng-container>
+  </mat-card>
+
+

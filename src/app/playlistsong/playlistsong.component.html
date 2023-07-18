@@ -1,0 +1,26 @@
+
+ <mat-card class="example-card"  >
+
+  <div *ngFor="let playlist of tracks">
+
+  <mat-card-header>
+    <mat-card-title>{{playlist.trackName}}</mat-card-title>
+    <mat-card-title>{{playlist.artist}}</mat-card-title>
+   <mat-card-actions>
+<button (click)="playSongByUrl(playlist.filePath)">	<mat-icon>play_circle_filled</mat-icon></button>
+<button (click)="pause()"><mat-icon>pause_circle_outline</mat-icon></button>
+    <button mat-button (click)="deleteSong(playlist.trackName)" >	<mat-icon>delete</mat-icon></button>
+
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card-header>
+
+  </div>
+
+  <ng-container *ngIf="requestedSongError">
+    <h3>{{requestedsong}}</h3>
+  </ng-container>
+</mat-card>
+

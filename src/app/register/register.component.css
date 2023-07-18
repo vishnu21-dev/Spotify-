@@ -1,0 +1,16 @@
+#main{
+  width: 45vw;
+  margin-left: 30vw;
+  margin-top: 15vh;
+  background-color: rgb(147, 175, 92);
+  padding: 2vh;
+
+}
+#input{
+  width: 35vw;
+  margin-top: 3vh;
+
+}
+#button{
+  margin-top: 2vh;
+}

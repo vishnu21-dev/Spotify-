@@ -1,0 +1,15 @@
+#box{
+  background-color: rgb(214, 231, 180);
+  margin-left: 30vw;
+  margin-top: 20vh;
+  padding: 5vh;
+  width: 35vw;
+  height: 40vh;
+}
+#input1{
+  width: 30vw;
+  margin-top: 2vh;
+}
+#button{
+  margin-top: 5vh;
+}

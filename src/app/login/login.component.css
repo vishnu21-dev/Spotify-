@@ -1,0 +1,16 @@
+#div{
+  width: 40vw;
+  padding: 4vw;
+  height: 30vh;
+  margin-left: 20vw;
+  margin-top: 10vw;
+  background-color: rgb(227, 244, 195);
+}
+#input{
+  width: 30vw;
+  margin-top: 2vh;
+}
+#button{
+  margin-top: 2vh;
+
+}

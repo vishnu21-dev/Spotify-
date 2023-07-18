@@ -1,0 +1,22 @@
+<form #loginForm="ngForm" (ngSubmit)="addPlaylist()"  >
+
+    <h3>Create Your Playlist</h3>
+
+  <input id="input1"name="playListname" placeholder="Enter playListname" type="text" #playlistname="ngModel" [(ngModel)]="list.name" minlength="5" required>
+  <div *ngIf="playlistname.invalid && (playlistname.touched || playlistname.dirty) ">
+    <div *ngIf="playlistname?.errors?.['minlength']">
+      <p>Not valid</p>
+    </div>
+    <div *ngIf="playlistname?.errors?.['required']">
+      <p>PlayListName is required</p>
+    </div>
+  </div>
+<button id="button" [disabled]="playlistname.invalid">createPlaylist</button>
+<ng-container *ngIf="requestedSongError">
+  <h3>{{requestedsong}}</h3>
+</ng-container>
+</form>
+
+
+
+
