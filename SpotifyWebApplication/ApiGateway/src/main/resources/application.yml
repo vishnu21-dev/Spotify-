@@ -1,0 +1,14 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: apiGateway
+  cloud:
+
+        gateway:
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowedOrigins: "*"
+                allowedHeaders: "*"
+                allowedMethods: "*"
